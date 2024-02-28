@@ -2,33 +2,62 @@ import './App.css'
 import CurrentWeather from './components/current_weather/CurrentWeather'
 import Search from './components/search/Search'
 import { weatherApiUrl, weatherApiKey } from './api'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Forecast from './components/forecast_weather/Forecast'
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState(null)
   const [forecast, setForecast] = useState(null)
+  const [position, setPosition] = useState(null)
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setPosition({
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        })
+      })
+    } else {
+      console.log('Geolocation is not available in your browser.')
+    }
+  }, [])
 
   const onSearchChange = (searchData) => {
-    const geoAndKey = `lat=${searchData.lat}&lon=${searchData.lon}&appid=${weatherApiKey}`
-    const currentWeatherUrl = `${weatherApiUrl}/weather?${geoAndKey}`
-    const forecastWeatherUrl = `${weatherApiUrl}/forecast?${geoAndKey}`
-
-    // current weather data
-    fetch(currentWeatherUrl)
-      .then((res) => res.json())
-      .then((res) => setCurrentWeather(res))
-
-    // weather forecast data
-    fetch(forecastWeatherUrl)
-      .then((res) => res.json())
-      .then((res) => setForecast(res))
+    setPosition({
+      lat: searchData.lat,
+      lon: searchData.lon,
+    })
   }
 
+  useEffect(() => {
+    const geoAndKey = `lat=${position?.lat}&lon=${position?.lon}&appid=${weatherApiKey}&units=metric`
+    if (position) {
+      fetch(`${weatherApiUrl}/weather?${geoAndKey}`)
+        .then((res) => res.json())
+        .then((res) => setCurrentWeather(res))
+
+      fetch(`${weatherApiUrl}/forecast?${geoAndKey}`)
+        .then((res) => res.json())
+        .then((res) => setForecast(res))
+    } else {
+      console.log('Getting location...')
+    }
+  }, [position])
+
+  console.log(position)
+
   return (
-    <div>
-      <Search onSearchChange={onSearchChange} />
-      {currentWeather && <CurrentWeather currentWeather={currentWeather} />}
-    </div>
+    <main className='app'>
+      <div className='app_container'>
+        <Search onSearchChange={onSearchChange} />
+        {position ? (
+          currentWeather && <CurrentWeather currentWeather={currentWeather} />
+        ) : (
+          <h1>Getting your location weather</h1>
+        )}
+      </div>
+    </main>
   )
 }
 
