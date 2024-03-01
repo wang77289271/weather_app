@@ -19,6 +19,7 @@
   p {
     font-size: 0.9rem;
     text-align: center;
+    text-transform: capitalize;
   }
 }
 .current-top-right {
@@ -43,7 +44,7 @@
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-content: flex-start;
+    justify-content: center;
 
     p.current-temp-number {
       font-size: 5.5rem;

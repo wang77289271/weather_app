@@ -20,7 +20,7 @@ const Search = ({ onSearchChange }) => {
             return {
               lat: `${city.latitude}`,
               lon: `${city.longitude}`,
-              label: `${city.name},${city.countryCode}`,
+              label: `${city.name}, ${city.countryCode}`,
             }
           }),
         }

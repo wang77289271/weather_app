@@ -27,6 +27,7 @@ const App = () => {
     setPosition({
       lat: searchData.lat,
       lon: searchData.lon,
+      label: searchData.label,
     })
   }
 
@@ -45,8 +46,6 @@ const App = () => {
     }
   }, [position])
 
-  // console.log(forecast)
-
   return (
     <main className='app app__flex'>
       <div className='app_container app-gradiant'>
@@ -60,7 +59,12 @@ const App = () => {
         </div>
         <div className='app__content'>
           {position ? (
-            currentWeather && <CurrentWeather currentWeather={currentWeather} />
+            currentWeather && (
+              <CurrentWeather
+                currentWeather={currentWeather}
+                position={position}
+              />
+            )
           ) : (
             <h1>Getting your location weather</h1>
           )}
