@@ -1,7 +1,9 @@
 import './CurrentWeather.scss'
 import { images } from '../../constains'
+import { IoLocationSharp } from 'react-icons/io5'
 
-const CurrentWeather = () => {
+const CurrentWeather = ({ currentWeather }) => {
+  console.log(currentWeather.main)
   const test = '09d'
   return (
     <div className='app__current-wrapper app__flex'>
@@ -14,9 +16,14 @@ const CurrentWeather = () => {
         </div>
         {/* right */}
         <div className='current-top-right'>
-          <p className='current-location'>Edmonton, CA</p>
+          <p className='current-location app__flex'>
+            <IoLocationSharp />
+            <span>Edmonton, CA</span>
+          </p>
           <div className='current-temp'>
-            <p className='current-temp-number'>24</p>
+            <p className='current-temp-number'>
+              {parseInt(currentWeather.main.temp)}
+            </p>
             <p className='current-temp-symbol'>°C</p>
           </div>
           <p className='current-feels-like'>Feels like: 18°C</p>

@@ -30,6 +30,13 @@
     letter-spacing: 0.5px;
     font-weight: 300;
     font-size: 1.1rem;
+    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    span {
+      margin-left: 0.3rem;
+    }
   }
 
   .current-temp {
@@ -39,12 +46,12 @@
     justify-content: flex-start;
 
     p.current-temp-number {
-      font-size: 7rem;
+      font-size: 5.5rem;
       font-weight: 700;
       //   line-height: 6.5rem;
     }
     p.current-temp-symbol {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 300;
       margin-top: 0.8rem;
     }
@@ -52,6 +59,7 @@
   p.current-feels-like {
     color: var(--secondary-color);
     letter-spacing: 0.5px;
+    text-align: left;
   }
 }
 

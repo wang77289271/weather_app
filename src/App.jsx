@@ -45,7 +45,7 @@ const App = () => {
     }
   }, [position])
 
-  console.log(forecast)
+  // console.log(forecast)
 
   return (
     <main className='app app__flex'>
