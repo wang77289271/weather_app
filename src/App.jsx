@@ -66,7 +66,9 @@ const App = () => {
               />
             )
           ) : (
-            <h1>Getting your location weather</h1>
+            <h1 className='loading-location'>
+              Getting your location weather...
+            </h1>
           )}
           {position && forecast && <Forecast forecast={forecast} />}
         </div>
