@@ -58,7 +58,7 @@ const App = () => {
         <div className='app__search'>
           <Search onSearchChange={onSearchChange} />
         </div>
-        <div className='app__content '>
+        <div className='app__content'>
           {position ? (
             currentWeather && <CurrentWeather currentWeather={currentWeather} />
           ) : (
