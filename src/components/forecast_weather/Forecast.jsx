@@ -30,7 +30,10 @@ const Forecast = ({ forecast }) => {
           className='app__forecast-container forecast-gradiant app__flex'
           key={`forecast-${index}`}
         >
-          <h1>{forecast_days[index]}</h1>
+          <div className='forecast-days'>
+            <h1>{forecast_days[index]}</h1>
+            <p>{forecast[0].dt_txt.split(' ')[0]}</p>
+          </div>
           <div className='forecast-temp app__flex'>
             <h2>{parseInt(forecast[0].main.temp)}</h2>
             <p>°C</p>

@@ -33,7 +33,7 @@ const Search = ({ onSearchChange }) => {
     // provide correct types here
     control: (provided, state) => ({
       ...provided,
-      borderRadius: '5px',
+      borderRadius: '1px',
       border: 'none !important',
       backgroundColor: '#11003f9c',
     }),
