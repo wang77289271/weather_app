@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import CurrentWeather from './components/current_weather/CurrentWeather'
 import Search from './components/search/Search'
 import { weatherApiUrl, weatherApiKey } from './api'
@@ -45,17 +45,27 @@ const App = () => {
     }
   }, [position])
 
-  console.log(position)
+  console.log(forecast)
 
   return (
-    <main className='app'>
-      <div className='app_container'>
-        <Search onSearchChange={onSearchChange} />
-        {position ? (
-          currentWeather && <CurrentWeather currentWeather={currentWeather} />
-        ) : (
-          <h1>Getting your location weather</h1>
-        )}
+    <main className='app app__flex'>
+      <div className='app_container app-gradiant'>
+        <div className='app__title'>
+          <h1 className='header-text'>
+            Weather <span>Forecast</span>
+          </h1>
+        </div>
+        <div className='app__search'>
+          <Search onSearchChange={onSearchChange} />
+        </div>
+        <div className='app__content '>
+          {position ? (
+            currentWeather && <CurrentWeather currentWeather={currentWeather} />
+          ) : (
+            <h1>Getting your location weather</h1>
+          )}
+          {position && forecast && <Forecast forecast={forecast} />}
+        </div>
       </div>
     </main>
   )

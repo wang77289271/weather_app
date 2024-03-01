@@ -1,0 +1,22 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-base: 'Inter', sans-serif;
+  --font-title: 'Poppins', sans-serif;
+
+  --primary-color: #ffffff;
+  --secondary-color: #dddddd;
+  --black-color: #030303;
+  --gray-color: #555555;
+  --yellow-color: #ffb802;
+  --white-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}

@@ -18,6 +18,8 @@ import icon_50d from '../assets/50d.png'
 import icon_50n from '../assets/50n.png'
 import icon_degrees from '../assets/degrees.png'
 import icon_temp from '../assets/temp.png'
+import temp_max from '../assets/temp_max.png'
+import temp_min from '../assets/temp_min.png'
 
 export default {
   icon_01d,
@@ -40,4 +42,6 @@ export default {
   icon_50n,
   icon_degrees,
   icon_temp,
+  temp_max,
+  temp_min,
 }

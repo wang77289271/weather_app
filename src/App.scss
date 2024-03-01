@@ -1,0 +1,71 @@
+main {
+  min-height: 100vh;
+  font-family: var(--font-base);
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.bg-gradiant {
+  background: rgb(155, 102, 218);
+  background: radial-gradient(
+    circle,
+    rgba(155, 102, 218, 1) 0%,
+    rgba(183, 123, 223, 1) 49%,
+    rgba(182, 111, 195, 1) 100%
+  );
+}
+
+.app-gradiant {
+  background: rgb(25, 0, 95);
+  background: linear-gradient(
+    180deg,
+    rgba(25, 0, 95, 1) 0%,
+    rgba(149, 120, 172, 1) 100%
+  );
+}
+
+.forecast-gradiant {
+  background: rgb(29, 4, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(29, 4, 98, 1) 0%,
+    rgba(139, 71, 206, 1) 100%
+  );
+}
+
+.app {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app_container {
+  width: 450px;
+  margin: 3rem auto;
+  padding: 3.5rem 2rem;
+  border-radius: 20px;
+}
+
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  span {
+    color: var(--yellow-color);
+  }
+}
+
+.p-text {
+  font-size: 1rem;
+}
+
+.app__search {
+  padding: 1rem 0;
+  width: 90%;
+  margin: auto;
+}

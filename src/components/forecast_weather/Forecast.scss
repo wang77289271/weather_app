@@ -1,0 +1,36 @@
+.app__forecast-container {
+  flex-direction: row;
+  padding: 1rem;
+  border-radius: 10px;
+  h1 {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+  }
+  .forecast-temp {
+    flex: 1;
+    align-items: flex-start;
+    h2 {
+      font-size: 2.3rem;
+      font-weight: 300;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-left: 0.2rem;
+      margin-top: 0.2rem;
+    }
+  }
+  .forecast-weather {
+    flex-direction: column;
+    flex: 1;
+
+    img {
+      width: 50%;
+    }
+    p {
+      font-size: 0.6rem;
+      margin-top: 0.3rem;
+    }
+  }
+}
