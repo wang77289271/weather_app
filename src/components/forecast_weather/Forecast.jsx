@@ -22,7 +22,6 @@ const Forecast = ({ forecast }) => {
     .slice(date, weekdays.length)
     .concat(weekdays.slice(0, date))
 
-  console.log(fiveDaysForecase[0])
   return (
     <div className='app__forecast-wrapper app__flex'>
       {fiveDaysForecase.map((forecast, index) => (
