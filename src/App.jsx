@@ -4,6 +4,8 @@ import Search from './components/search/Search'
 import { weatherApiUrl, weatherApiKey } from './api'
 import { useEffect, useState } from 'react'
 import Forecast from './components/forecast_weather/Forecast'
+import { images } from './constains'
+import Background from './components/background/Background'
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState(null)
@@ -72,6 +74,7 @@ const App = () => {
           )}
           {position && forecast && <Forecast forecast={forecast} />}
         </div>
+        <Background weatherBackground={currentWeather} />
       </div>
     </main>
   )

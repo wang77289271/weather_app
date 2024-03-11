@@ -35,7 +35,7 @@ const Search = ({ onSearchChange }) => {
       ...provided,
       borderRadius: '1px',
       border: 'none !important',
-      backgroundColor: '#11003f9c',
+      backgroundColor: '#dcdcdc',
     }),
     option: (provided, state) => ({
       ...provided,

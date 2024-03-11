@@ -1,5 +1,10 @@
 .app__current-wrapper {
   flex-direction: column;
+  // background: rgba(255, 255, 255, 0.25);
+  // backdrop-filter: blur(4px);
+  // -webkit-backdrop-filter: blur(4px);
+  // border-radius: 20px;
+  margin-bottom: 1rem;
 }
 
 .app__current-top {
@@ -20,6 +25,7 @@
     font-size: 0.9rem;
     text-align: center;
     text-transform: capitalize;
+    letter-spacing: 0.5px;
   }
 }
 .current-top-right {
@@ -28,7 +34,7 @@
 
   p.current-location {
     color: var(--secondary-color);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.9px;
     font-weight: 300;
     font-size: 1.1rem;
     text-align: left;

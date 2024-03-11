@@ -16,7 +16,7 @@ main {
 }
 
 .app-gradiant {
-  background: rgb(25, 0, 95);
+  background: rgb(35, 0, 133);
   background: linear-gradient(
     180deg,
     rgba(25, 0, 95, 1) 0%,
@@ -43,6 +43,7 @@ main {
   margin: 3rem auto;
   padding: 3.5rem 2rem;
   border-radius: 20px;
+  position: relative;
 }
 
 .app__flex {
@@ -65,10 +66,18 @@ main {
   font-size: 1rem;
 }
 
+.app__title,
+.app__content {
+  position: inherit;
+  z-index: 2;
+}
+
 .app__search {
   padding: 1rem 0;
   width: 100%;
   margin: auto;
+  position: inherit;
+  z-index: 3;
 }
 
 .app__content {
