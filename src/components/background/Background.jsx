@@ -2,7 +2,6 @@ import { images } from '../../constains'
 import './Background.scss'
 
 const Background = ({ weatherBackground }) => {
-  console.log(weatherBackground?.weather[0].icon)
   return (
     <div className='bg_container'>
       <div className='bg_img'>
