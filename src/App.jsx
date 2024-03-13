@@ -4,7 +4,6 @@ import Search from './components/search/Search'
 import { weatherApiUrl, weatherApiKey } from './api'
 import { useEffect, useState } from 'react'
 import Forecast from './components/forecast_weather/Forecast'
-import { images } from './constains'
 import Background from './components/background/Background'
 
 const App = () => {
@@ -47,6 +46,8 @@ const App = () => {
       console.log('Getting location...')
     }
   }, [position])
+
+  console.log(forecast)
 
   return (
     <main className='app app__flex'>
