@@ -10,6 +10,8 @@ This Weather App is built with React and allows users to get current location we
 2. **Search Location:** Users can search for weather information in any location by typing the city name or zip code into the search bar. The app retrieves the weather data for the specified location.
 3. **Weather Forecast:** The app provides a weather forecast for the upcoming days, allowing users to plan ahead and stay informed about changes in weather conditions.
 
+![Weather app demo](./src/assets/weather_app_demo.png)
+
 ## API Integration
 
 This app integrates with two APIs:

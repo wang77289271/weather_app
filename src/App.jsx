@@ -47,8 +47,6 @@ const App = () => {
     }
   }, [position])
 
-  console.log(forecast)
-
   return (
     <main className='app app__flex'>
       <div className='app_container app-gradiant'>
